@@ -1,0 +1,336 @@
+const imagePos = [
+  {name: 'tm', x: -208, y: -143},
+  {name: 'ao', x: -128, y: 0},
+  {name: 'tn', x: -224, y: -143},
+  {name: 'th', x: -128, y: -143},
+  {name: 'ae', x: -16, y: 0},
+  {name: 'ph', x: -224, y: -110},
+  {name: 'tt', x: -16, y: -154},
+  {name: 'bv', x: -208, y: -11},
+  {name: 'bj', x: -96, y: -11},
+  {name: 'lr', x: -16, y: -88},
+  {name: 'tw', x: -48, y: -154},
+  {name: 'ck', x: -128, y: -22},
+  {name: 'nz', x: -128, y: -110},
+  {name: 'bm', x: -112, y: -11},
+  {name: 'km', x: -64, y: -77},
+  {name: 'nl', x: -48, y: -110},
+  {name: 'ug', x: -96, y: -154},
+  {name: 'jp', x: -240, y: -66},
+  {name: 'so', x: -176, y: -132},
+  {name: 'ne', x: -240, y: -99},
+  {name: 'bd', x: -16, y: -11},
+  {name: 'pt', x: -80, y: -121},
+  {name: 'bt', x: -192, y: -11},
+  {name: 'mu', x: -112, y: -99},
+  {name: 'at', x: -176, y: 0},
+  {name: 'tr', x: 0, y: -154},
+  {name: 'sm', x: -144, y: -132},
+  {name: 'dk', x: -80, y: -33},
+  {name: 'no', x: -64, y: -110},
+  {name: 'si', x: -96, y: -132},
+  {name: 'sr', x: -208, y: -132},
+  {name: 'es', x: -240, y: -33},
+  {name: 'cf', x: -64, y: -22},
+  {name: 'hm', x: -192, y: -55},
+  {name: 'sk', x: -112, y: -132},
+  {name: 'ps', x: -64, y: -121},
+  {name: 'xk', x: -80, y: -165},
+  {name: 'lb', x: -208, y: -77},
+  {name: 'kz', x: -176, y: -77},
+  {name: 'mp', x: -32, y: -99},
+  {name: 'fj', x: -48, y: -44},
+  {name: 'uz', x: -160, y: -154},
+  {name: 'sh', x: -80, y: -132},
+  {name: 'am', x: -96, y: 0},
+  {name: 'eu', x: -16, y: -44},
+  {name: 'kn', x: -80, y: -77},
+  {name: 'lu', x: -64, y: -88},
+  {name: 'ly', x: -96, y: -88},
+  {name: 'tibet', x: -144, y: -143},
+  {name: 'bb', x: 0, y: -11},
+  {name: 'gi', x: -240, y: -44},
+  {name: 'ai', x: -64, y: 0},
+  {name: 'br', x: -160, y: -11},
+  {name: 'gs', x: -96, y: -55},
+  {name: 'pa', x: -160, y: -110},
+  {name: 'ge', x: -176, y: -44},
+  {name: 'vn', x: 0, y: -165},
+  {name: 'gr', x: -80, y: -55},
+  {name: 'ni', x: -32, y: -110},
+  {name: 'me', x: -160, y: -88},
+  {name: 'ir', x: -144, y: -66},
+  {name: 'ss', x: -224, y: -132},
+  {name: 'al', x: -80, y: 0},
+  {name: 'gu', x: -128, y: -55},
+  {name: 'cl', x: -144, y: -22},
+  {name: 'ng', x: -16, y: -110},
+  {name: 'gl', x: 0, y: -55},
+  {name: 'do', x: -112, y: -33},
+  {name: 'ls', x: -32, y: -88},
+  {name: 'sz', x: -48, y: -143},
+  {name: 'dm', x: -96, y: -33},
+  {name: 'sl', x: -128, y: -132},
+  {name: 'ba', x: -240, y: 0},
+  {name: 'kp', x: -96, y: -77},
+  {name: 'nc', x: -224, y: -99},
+  {name: 'cg', x: -80, y: -22},
+  {name: 'ky', x: -160, y: -77},
+  {name: 'be', x: -32, y: -11},
+  {name: 'kh', x: -32, y: -77},
+  {name: 'yt', x: -112, y: -165},
+  {name: 'cz', x: -32, y: -33},
+  {name: 're', x: -144, y: -121},
+  {name: 'sd', x: -32, y: -132},
+  {name: 'tf', x: -96, y: -143},
+  {name: 'qa', x: -128, y: -121},
+  {name: 'lc', x: -224, y: -77},
+  {name: 'la', x: -192, y: -77},
+  {name: 'jo', x: -224, y: -66},
+  {name: 'pw', x: -96, y: -121},
+  {name: 'rs', x: -176, y: -121},
+  {name: 'lv', x: -80, y: -88},
+  {name: 'ke', x: 0, y: -77},
+  {name: 'tl', x: -192, y: -143},
+  {name: 'gq', x: -64, y: -55},
+  {name: 'catalonia', x: -32, y: -22},
+  {name: 'gb', x: -144, y: -44},
+  {name: 'ci', x: -112, y: -22},
+  {name: 'my', x: -176, y: -99},
+  {name: 'ws', x: -64, y: -165},
+  {name: 'mq', x: -48, y: -99},
+  {name: 'se', x: -48, y: -132},
+  {name: 'bg', x: -64, y: -11},
+  {name: 'ml', x: -224, y: -88},
+  {name: 'mk', x: -208, y: -88},
+  {name: 'sx', x: -16, y: -143},
+  {name: 'bo', x: -144, y: -11},
+  {name: 'ma', x: -112, y: -88},
+  {name: 'iq', x: -128, y: -66},
+  {name: 'fi', x: -32, y: -44},
+  {name: 'sv', x: 0, y: -143},
+  {name: 'us', x: -128, y: -154},
+  {name: 'mm', x: -240, y: -88},
+  {name: 'va', x: -176, y: -154},
+  {name: 'bn', x: -128, y: -11},
+  {name: 'zw', x: -176, y: -165},
+  {name: 'mw', x: -144, y: -99},
+  {name: 'tc', x: -64, y: -143},
+  {name: 'mn', x: 0, y: -99},
+  {name: 'ch', x: -96, y: -22},
+  {name: 'gf', x: -192, y: -44},
+  {name: 'zm', x: -160, y: -165},
+  {name: 'ga', x: -128, y: -44},
+  {name: 'um', x: -112, y: -154},
+  {name: 'ht', x: -240, y: -55},
+  {name: 'co', x: -192, y: -22},
+  {name: 'ye', x: -96, y: -165},
+  {name: 'rw', x: -208, y: -121},
+  {name: 'ec', x: -144, y: -33},
+  {name: 'ki', x: -48, y: -77},
+  {name: 'sb', x: -240, y: -121},
+  {name: 'mh', x: -192, y: -88},
+  {name: 'mr', x: -64, y: -99},
+  {name: 'mo', x: -16, y: -99},
+  {name: 'eg', x: -176, y: -33},
+  {name: 'et', x: 0, y: -44},
+  {name: 'cd', x: -48, y: -22},
+  {name: 'mt', x: -96, y: -99},
+  {name: 'zanzibar', x: -144, y: -165},
+  {name: 'nu', x: -112, y: -110},
+  {name: 'ee', x: -160, y: -33},
+  {name: 'hk', x: -176, y: -55},
+  {name: 'dj', x: -64, y: -33},
+  {name: 'ic', x: -16, y: -66},
+  {name: 'ca', x: -16, y: -22},
+  {name: 'to', x: -240, y: -143},
+  {name: 'bs', x: -176, y: -11},
+  {name: 'fr', x: -112, y: -44},
+  {name: 'is', x: -160, y: -66},
+  {name: 'pm', x: -16, y: -121},
+  {name: 'vi', x: -240, y: -154},
+  {name: 'ad', x: 0, y: 0},
+  {name: 'eh', x: -192, y: -33},
+  {name: 'cr', x: -208, y: -22},
+  {name: 'vg', x: -224, y: -154},
+  {name: 'sy', x: -32, y: -143},
+  {name: 'ru', x: -192, y: -121},
+  {name: 'hn', x: -208, y: -55},
+  {name: 'gw', x: -144, y: -55},
+  {name: 'gg', x: -208, y: -44},
+  {name: 'an', x: -112, y: 0},
+  {name: 'somaliland', x: -192, y: -132},
+  {name: 'cn', x: -176, y: -22},
+  {name: 'wales', x: -32, y: -165},
+  {name: 'fm', x: -80, y: -44},
+  {name: 'tz', x: -64, y: -154},
+  {name: 'scotland', x: -16, y: -132},
+  {name: 'it', x: -176, y: -66},
+  {name: 'pe', x: -176, y: -110},
+  {name: 'tk', x: -176, y: -143},
+  {name: 'sa', x: -224, y: -121},
+  {name: 'au', x: -192, y: 0},
+  {name: 'ms', x: -80, y: -99},
+  {name: 'gh', x: -224, y: -44},
+  {name: 'mg', x: -176, y: -88},
+  {name: 'pl', x: 0, y: -121},
+  {name: 'de', x: -48, y: -33},
+  {name: 'lk', x: 0, y: -88},
+  {name: 'bh', x: -80, y: -11},
+  {name: 'py', x: -112, y: -121},
+  {name: 'za', x: -128, y: -165},
+  {name: 'cy', x: -16, y: -33},
+  {name: 'il', x: -64, y: -66},
+  {name: 'gd', x: -160, y: -44},
+  {name: 'nr', x: -96, y: -110},
+  {name: 'vu', x: -16, y: -165},
+  {name: 'jm', x: -208, y: -66},
+  {name: 'td', x: -80, y: -143},
+  {name: 'wf', x: -48, y: -165},
+  {name: 'pr', x: -48, y: -121},
+  {name: 'mv', x: -128, y: -99},
+  {name: 'id', x: -32, y: -66},
+  {name: 'tg', x: -112, y: -143},
+  {name: 'by', x: -240, y: -11},
+  {name: 'io', x: -112, y: -66},
+  {name: 'pn', x: -32, y: -121},
+  {name: 'je', x: -192, y: -66},
+  {name: 'bz', x: 0, y: -22},
+  {name: 'hu', x: 0, y: -66},
+  {name: 'tj', x: -160, y: -143},
+  {name: 'ie', x: -48, y: -66},
+  {name: 'kw', x: -144, y: -77},
+  {name: 'bf', x: -48, y: -11},
+  {name: 'uy', x: -144, y: -154},
+  {name: 'er', x: -224, y: -33},
+  {name: 'sc', x: 0, y: -132},
+  {name: 'fk', x: -64, y: -44},
+  {name: 'kr', x: -112, y: -77},
+  {name: 'ar', x: -144, y: 0},
+  {name: 've', x: -208, y: -154},
+  {name: 'az', x: -224, y: 0},
+  {name: 'md', x: -144, y: -88},
+  {name: 'tv', x: -32, y: -154},
+  {name: 'nf', x: 0, y: -110},
+  {name: 'fo', x: -96, y: -44},
+  {name: 'gt', x: -112, y: -55},
+  {name: 'af', x: -32, y: 0},
+  {name: 'cu', x: -224, y: -22},
+  {name: 'aw', x: -208, y: 0},
+  {name: 'mz', x: -192, y: -99},
+  {name: 'mx', x: -160, y: -99},
+  {name: 'om', x: -144, y: -110},
+  {name: 'gm', x: -16, y: -55},
+  {name: 'pf', x: -192, y: -110},
+  {name: 'bw', x: -224, y: -11},
+  {name: 'england', x: -208, y: -33},
+  {name: 'cw', x: 0, y: -33},
+  {name: 'sg', x: -64, y: -132},
+  {name: 'ro', x: -160, y: -121},
+  {name: 'ua', x: -80, y: -154},
+  {name: 'hr', x: -224, y: -55},
+  {name: 'gp', x: -48, y: -55},
+  {name: 'im', x: -80, y: -66},
+  {name: 'pk', x: -240, y: -110},
+  {name: 'cm', x: -160, y: -22},
+  {name: 'lt', x: -48, y: -88},
+  {name: 'li', x: -240, y: -77},
+  {name: 'st', x: -240, y: -132},
+  {name: 'mc', x: -128, y: -88},
+  {name: 'cv', x: -240, y: -22},
+  {name: 'pg', x: -208, y: -110},
+  {name: 'kurdistan', x: -128, y: -77},
+  {name: 'in', x: -96, y: -66},
+  {name: 'kg', x: -16, y: -77},
+  {name: 'as', x: -160, y: 0},
+  {name: 'np', x: -80, y: -110},
+  {name: 'sn', x: -160, y: -132},
+  {name: 'na', x: -208, y: -99},
+  {name: 'gn', x: -32, y: -55},
+  {name: 'vc', x: -192, y: -154},
+  {name: 'ag', x: -48, y: 0},
+  {name: 'dz', x: -128, y: -33},
+  {name: 'gy', x: -160, y: -55}
+];
+
+console.log(imagePos.length);
+
+const svg = d3.select('svg'),
+      width = +svg.attr('width'),
+      height = +svg.attr('height');
+
+const simulation = d3.forceSimulation()
+      .force('link', d3.forceLink().id((d, i) => i))
+      .force('charge', d3.forceManyBody().strength(-5))
+      .force('center', d3.forceCenter(width / 2, height / 2));
+
+const url = 'https://raw.githubusercontent.com/DealPete/forceDirected/master/countries.json';
+
+d3.request(url).get((result) => {
+  const graph = JSON.parse(result.response);
+  
+  const defs = svg.append('defs')
+      .selectAll('pattern')
+      .data(imagePos)
+      .enter().append('pattern')
+      .attr('width', 16)
+      .attr('height', 11)
+      .attr('id', (d) => `${d.name}`);;;
+  
+  defs.append('image')
+      .attr('xlink:href', 'https://dl.dropboxusercontent.com/s/szv4xsyoo43yede/flags.png?dl=0')
+      .attr('width', 256)
+      .attr('height', 176)
+      .attr('transform', (d) => `translate(${d.x}, ${d.y})`);
+  
+  const link = svg.append('g')
+        .attr('class', 'links')
+      .selectAll('line')
+      .data(graph.links)
+      .enter().append('line');
+  
+  const node = svg.append('g')
+        .attr('class', 'nodes')
+      .selectAll('rect')
+      .data(graph.nodes)
+      .enter().append('rect')
+        .attr('width', 16)
+        .attr('height', 11)
+        .style('stroke', 'none')
+        .attr('fill', (d) => `url(#${d.code})`)
+      .call(d3.drag()
+            .on('start', dragstarted)
+            .on('drag', dragged)
+            .on('end', dragended));
+        
+  node.append('title').text((d) => d.country);
+  
+  simulation.nodes(graph.nodes).on('tick', ticked);
+  simulation.force('link').links(graph.links);
+  
+  function ticked() {
+    link.attr('x1', (d) => d.source.x)
+        .attr('y1', (d) => d.source.y)
+        .attr('x2', (d) => d.target.x)
+        .attr('y2', (d) => d.target.y);
+    
+    node.attr('x', (d) => d.x - 8).attr('y', (d) => d.y - 5.5);
+  }
+});
+
+const dragstarted = (d) => {
+  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+  d.fx = d.x;
+  d.fy = d.y;
+}
+
+const dragged = (d) => {
+  d.fx = d3.event.x;
+  d.fy = d3.event.y;
+}
+
+const dragended = (d) => {
+  if (!d3.event.active) simulation.alphaTarget(0);
+  d.fx = null;
+  d.fy = null;
+}
